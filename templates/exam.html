@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ ma_de }} — Làm bài thi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            /* Mẹo: Tráo đổi font serif cũ thành Quicksand tròn trịa để áp dụng tự động cho toàn trang */
+            serif: ['Quicksand', 'sans-serif'], 
+            sans: ['DM Sans', 'sans-serif'],
+            mono: ['DM Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --ink: #0f1523;
+      --parchment: #faf9f6;
+      --muted: #6b7280;
+      --accent: #1e3a8a;
+      --accent-light: #dbeafe;
+      --border: #e5e7eb;
+      --gold: #d97706;
+    }
+
+    * { box-sizing: border-box; }
+    body { background: var(--parchment); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+
+    /* ── Sticky Header ── */
+    .exam-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,249,246,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Progress Bar ── */
+    #section-progress-bar {
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), #60a5fa);
+      transition: width 0.4s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* ── Section page ── */
+    .section-page { display: none; }
+    .section-page.active { display: block; animation: fadeSlide 0.3s ease; }
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Section card ── */
+    .section-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 16px; padding: 28px 32px;
+      margin-bottom: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .section-header {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 24px; padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-badge {
+      background: var(--accent); color: #fff;
+      font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500;
+      padding: 4px 10px; border-radius: 20px; letter-spacing: 0.08em; white-space: nowrap;
+    }
+    .section-title-text {
+      font-family: 'Quicksand', sans-serif; font-size: 18px;
+      font-weight: 700; color: var(--accent); line-height: 1.4;
+      white-space: pre-wrap; /* Lệnh thần thánh ép rớt dòng cho tiêu đề */
+    }
+
+    /* ── Passage (Đoạn văn đọc hiểu) ── */
+    .passage-block {
+      background: #f8faff;
+      border: 1px solid #dbeafe;
+      border-radius: 12px;
+      padding: 24px;
+      font-size: 15px;
+      line-height: 1.85;
+      color: #1f2937;
+    }
+    
+    /* Các đoạn văn bình thường: Thụt lề */
+    .passage-content p {
+      text-indent: 1.5rem;
+      margin-bottom: 12px;
+    }
+    
+    /* Tự động lấy đoạn đầu tiên làm Tiêu đề: Căn giữa, in đậm, đổi màu */
+    .passage-content p:first-child {
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--accent);
+      text-indent: 0; /* Bỏ thụt lề cho tiêu đề */
+      margin-bottom: 20px;
+    }
+
+    /* ── Question card ── */
+    .q-card {
+      padding: 20px 0; border-bottom: 1px dashed #e9ecef;
+    }
+    .q-card:last-child { border-bottom: none; padding-bottom: 0; }
+    .q-number {
+      font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 600;
+      color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;
+    }
+    .q-text { 
+      font-size: 15px; 
+      font-weight: 600;
+      line-height: 1.7; 
+      color: var(--ink); 
+      margin-bottom: 14px; 
+      white-space: pre-wrap; /* Lệnh thần thánh ép nhận diện \n */
+    }
+    .q-image { 
+      max-width: 450px; /* Khống chế chiều ngang tối đa */
+      max-height: 250px; /* Khống chế chiều cao tối đa */
+      width: auto; /* Giữ nguyên tỷ lệ để ảnh không bị méo */
+      border-radius: 8px; 
+      border: 1.5px solid var(--border); 
+      margin: 0 auto 14px auto;
+      display: block;
+    }
+
+    /* ── Option cards ── */
+    .opts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    @media (max-width: 600px) { .opts-grid { grid-template-columns: 1fr; } }
+    .opt-card {
+      display: flex; align-items: center; gap: 10px; padding: 10px 12px;
+      border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer;
+      background: var(--parchment); transition: all 0.16s ease; user-select: none;
+    }
+    .opt-card:hover { border-color: var(--accent); background: var(--accent-light); }
+    .opt-card.selected { border-color: var(--accent); background: var(--accent-light); }
+    .opt-card.selected .opt-label { background: var(--accent); color: #fff; }
+    .opt-label {
+      width: 28px; height: 28px; border-radius: 7px; background: #e5e7eb; color: #4b5563;
+      font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.16s ease;
+    }
+    .opt-text { font-size: 14px; color: var(--ink); line-height: 1.45; }
+
+    /* ── Text input ── */
+    .tl-input {
+      width: 100%; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 14px;
+      font-size: 14px; color: var(--ink); background: var(--parchment); transition: 0.2s;
+    }
+    .tl-input:focus { outline: none; border-color: var(--accent); background: #fff; }
+
+    /* ── Navigation buttons ── */
+    .nav-btn {
+      display: flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 10px;
+      font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em;
+      cursor: pointer; transition: all 0.18s ease; border: 1.5px solid transparent;
+    }
+    .nav-btn-prev { background: #fff; border-color: var(--border); color: var(--muted); }
+    .nav-btn-prev:hover { border-color: var(--accent); color: var(--accent); }
+    .nav-btn-next { background: var(--accent); color: #fff; }
+    .nav-btn-next:hover { background: #1e3060; transform: translateX(2px); }
+    .nav-btn-submit { background: #065f46; color: #fff; }
+    .nav-btn-submit:hover { background: #064e3b; box-shadow: 0 6px 20px -4px rgba(6,95,70,0.5); }
+    .nav-btn:disabled { opacity: 0.35; cursor: not-allowed; transform: none !important; }
+
+    /* ── Right: Question Navigator ── */
+    .nav-panel { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+    .nav-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
+    .nav-cell {
+      aspect-ratio: 1; border-radius: 7px; border: 1.5px solid var(--border); background: #fff;
+      display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace;
+      font-size: 10px; color: #9ca3af; cursor: pointer; transition: all 0.14s;
+    }
+    .nav-cell:hover { border-color: var(--accent); color: var(--accent); }
+    .nav-cell.answered { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .nav-cell.current-section { border-color: var(--gold); color: var(--gold); }
+    .nav-cell.answered.current-section { background: var(--accent); border-color: var(--gold); color: #fff; }
+
+    .section-tab {
+      padding: 6px 10px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 10px;
+      cursor: pointer; border: 1.5px solid var(--border); background: #fff; color: var(--muted);
+      transition: all 0.14s; text-align: center;
+    }
+    .section-tab:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tab.active-tab { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+    /* ── Timer ── */
+    #timer { font-family: 'DM Mono', monospace; font-size: 22px; font-weight: 500; letter-spacing: 0.06em; color: var(--accent); }
+    #timer.warning { color: #dc2626; animation: blink 1s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+    /* ── Submit button (sidebar) ── */
+    .btn-submit-side {
+      width: 100%; padding: 12px; border-radius: 10px; background: #065f46; color: #fff;
+      font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; border: none; cursor: pointer;
+    }
+    .btn-submit-side:hover { background: #064e3b; }
+
+    /* ── Modal ── */
+    #modal-overlay { position: fixed; inset: 0; background: rgba(15,21,35,0.5); backdrop-filter: blur(6px); z-index: 200; display: flex; align-items: center; justify-content: center; }
+    #modal-overlay.hidden { display: none; }
+    .modal-box { background: #fff; border-radius: 20px; padding: 36px 32px; max-width: 380px; width: calc(100% - 32px); text-align: center; }
+    /* ── Nút Cắm Cờ ── */
+    .btn-flag {
+      background: transparent; border: 1px solid transparent; cursor: pointer;
+      color: #9ca3af; transition: all 0.2s; padding: 4px 10px; border-radius: 8px;
+      display: flex; align-items: center; gap: 6px; /* Căn chỉnh icon và chữ nằm ngang */
+    }
+    .btn-flag:hover { color: #f59e0b; background: #fffbeb; }
+    .btn-flag.active { color: #f59e0b; background: #fffbeb; border-color: #fde68a; }
+    .btn-flag svg { width: 16px; height: 16px; fill: currentColor; }
+    .flag-text { font-family: 'Quicksand', sans-serif; font-size: 13px; font-weight: 700; }
+
+    /* Hiệu ứng cờ trên ô điều hướng (Nav) */
+    .nav-cell { position: relative; }
+    .nav-flag-icon {
+      position: absolute; top: -5px; right: -5px;
+      color: #f59e0b; width: 14px; height: 14px;
+      display: none; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+    }
+    .nav-cell.is-flagged .nav-flag-icon { display: block; }
+  </style>
+</head>
+<body>
+
+<header class="exam-header">
+  <div class="max-w-[1500px] w-full mx-auto px-8 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 bg-blue-900 rounded-lg flex items-center justify-center flex-shrink-0">
+        <span class="text-amber-400 font-mono text-xs font-bold">EN</span>
+      </div>
+      <div>
+        <div class="font-serif text-sm font-semibold leading-tight">{{ ma_de.replace('_',' ') }}</div>
+        <div class="font-mono text-xs text-gray-400">Practice Exam</div>
+      </div>
+    </div>
+    <div class="hidden sm:flex items-center gap-2">
+      <span class="font-mono text-xs text-gray-400 tracking-widest">SECTION</span>
+      <span id="header-section-label" class="font-mono text-xs font-semibold text-blue-900 bg-blue-50 px-2 py-0.5 rounded-md">1 / {{ sections|length }}</span>
+    </div>
+    <div class="text-right">
+      <div class="font-mono text-xs text-gray-400 tracking-widest mb-0.5">TIME LEFT</div>
+      <div id="timer">60:00</div>
+    </div>
+  </div>
+  <div class="h-0.5 bg-gray-100">
+    <div id="section-progress-bar" style="width: 0%"></div>
+  </div>
+</header>
+
+<form method="POST" action="/nop_bai" id="exam-form" autocomplete="off">  
+  <input type="hidden" name="ma_de" value="{{ ma_de }}">
+
+  <div class="max-w-[1500px] w-full mx-auto px-8 py-6 flex gap-6 items-start">
+
+    <div class="flex-1 min-w-0">
+
+      {% set counter = namespace(index=1) %}
+      {% set section_index = namespace(i=0) %}
+
+      {% for ten_phan, nhom_cau_hoi in sections.items() %}
+      {% set section_index.i = section_index.i + 1 %}
+
+      <div class="section-page {% if section_index.i == 1 %}active{% endif %}" id="section-page-{{ section_index.i }}">
+        <div class="section-card">
+          <div class="section-header">
+            <span class="section-badge">SECTION {{ section_index.i }}</span>
+            <span class="section-title-text">{{ ten_phan }}</span>
+          </div>
+
+          {% set has_passage = nhom_cau_hoi[0].doan_van is defined and nhom_cau_hoi[0].doan_van %}
+
+          {% if has_passage %}
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+              
+              <div class="lg:w-[55%] sticky top-24">
+                <div class="passage-block max-h-[calc(100vh-140px)] overflow-y-auto">
+                  <div class="font-serif font-bold text-lg mb-4 text-blue-900 border-b border-blue-100 pb-2">Read the following passage carefully:</div>
+                  <div class="passage-content">
+                    {# Tự động ngắt đoạn p từ \n\n #}
+                    {% for p in nhom_cau_hoi[0].doan_van.split('\n\n') %}
+                      <p>{{ p }}</p>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:w-[45%] flex flex-col gap-2">
+                {% for cau in nhom_cau_hoi %}
+                  <div class="q-card" id="q-card-{{ counter.index }}">
+                    <div class="flex items-center justify-between mb-2">
+                          <div class="q-number mb-0">Question {{ counter.index }}</div>
+                          <button type="button" class="btn-flag" id="btn-flag-{{ counter.index }}" onclick="toggleFlag({{ counter.index }})">
+                            <svg viewBox="0 0 24 24"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg>
+                            <span class="flag-text" id="flag-text-{{ counter.index }}">Đặt cờ</span>
+                          </button>
+                        </div>
+                    {% if cau.loai_cau_hoi == 'trac_nghiem' %}
+                      <p class="q-text font-semibold">{{ cau.noi_dung_cau_hoi }}</p>
+                      <div class="flex flex-col gap-2 mt-3">
+                        {% for key in ['A','B','C','D'] %}
+                        <div class="opt-card" onclick="chonDapAn(this, {{ counter.index }}, '{{ key }}')">
+                          <span class="opt-label">{{ key }}</span>
+                          <span class="opt-text">{{ cau[key] }}</span>
+                          <input type="radio" name="cau_{{ cau.id_cau }}" value="{{ key }}" class="hidden"/>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                  </div>
+                  {% set counter.index = counter.index + 1 %}
+                {% endfor %}
+              </div>
+            </div>
+
+          {% else %}
+            <div>
+              {% for cau in nhom_cau_hoi %}
+                <div class="q-card" id="q-card-{{ counter.index }}">
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="q-number mb-0">Question {{ counter.index }}</div>
+                    <button type="button" class="btn-flag" id="btn-flag-{{ counter.index }}" onclick="toggleFlag({{ counter.index }})">
+                      <svg viewBox="0 0 24 24"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg>
+                      <span class="flag-text" id="flag-text-{{ counter.index }}">Đặt cờ</span>
+                    </button>
+                  </div>
+                  {% if cau.hinh_anh is defined and cau.hinh_anh %}
+                  <img src="{{ cau.hinh_anh }}" class="q-image">
+                  {% endif %}
+                  <p class="q-text">{{ cau.noi_dung_cau_hoi }}</p>
+                  
+                  {% if cau.loai_cau_hoi == 'trac_nghiem' %}
+                    <div class="opts-grid mt-3">
+                      {% for key in ['A','B','C','D'] %}
+                      <div class="opt-card" onclick="chonDapAn(this, {{ counter.index }}, '{{ key }}')">
+                        <span class="opt-label">{{ key }}</span>
+                        <span class="opt-text">{{ cau[key] }}</span>
+                        <input type="radio" name="cau_{{ cau.id_cau }}" value="{{ key }}" class="hidden"/>
+                      </div>
+                      {% endfor %}
+                    </div>
+                  {% elif cau.loai_cau_hoi == 'tu_luan_ngan' %}
+                    <input type="text" name="cau_{{ cau.id_cau }}" class="tl-input mt-3" placeholder="Your answer..." data-global-index="{{ counter.index }}" autocomplete="off"/>
+                  {% endif %}
+                </div>
+                {% set counter.index = counter.index + 1 %}
+              {% endfor %}
+            </div>
+          {% endif %}
+
+        </div>
+
+        <div class="flex items-center justify-between mt-6 mb-10">
+          <button type="button" class="nav-btn nav-btn-prev" onclick="goToSection({{ section_index.i - 1 }})" {% if section_index.i == 1 %}disabled{% endif %}>
+            ← PREVIOUS
+          </button>
+          {% if section_index.i < sections|length %}
+          <button type="button" class="nav-btn nav-btn-next" onclick="goToSection({{ section_index.i + 1 }})">NEXT →</button>
+          {% else %}
+          <button type="button" class="nav-btn nav-btn-submit" onclick="xacNhanNopBai()">✓ SUBMIT</button>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="w-60 flex-shrink-0 hidden lg:block">
+      <div class="sticky top-20">
+        <div class="nav-panel">
+          <div class="font-mono text-xs tracking-widest text-gray-400 uppercase mb-3">Sections</div>
+          <div class="grid grid-cols-4 gap-1.5 mb-4">
+            {% for ten_phan in sections.keys() %}
+            <div class="section-tab {% if loop.index == 1 %}active-tab{% endif %}" id="stab-{{ loop.index }}" onclick="goToSection({{ loop.index }})" title="{{ ten_phan }}">{{ loop.index }}</div>
+            {% endfor %}
+          </div>
+          <div class="font-mono text-xs tracking-widest text-gray-400 uppercase mb-3">Questions</div>
+          <div class="nav-grid mb-4" id="nav-grid">
+            {% for cau in questions %}
+            <div class="nav-cell" id="nav-{{ loop.index }}" onclick="jumpToQuestion({{ loop.index }})">
+                {{ loop.index }}
+                <svg class="nav-flag-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="space-y-1.5 mb-4">
+            <div class="flex items-center gap-2 font-mono text-xs text-gray-500">
+              <div class="w-4 h-4 rounded bg-blue-900 flex-shrink-0"></div> Answered
+            </div>
+            <div class="flex items-center gap-2 font-mono text-xs text-gray-500">
+              <div class="w-4 h-4 rounded border-2 border-gray-200 bg-white flex-shrink-0"></div> Unanswered
+            </div>
+          </div>
+          <button type="button" onclick="xacNhanNopBai()" class="btn-submit-side">✓ SUBMIT EXAM</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</form>
+
+<div id="modal-overlay" class="hidden">
+  <div class="modal-box">
+    <div class="text-4xl mb-4">📋</div>
+    <h3 class="font-serif text-xl font-bold mb-2">Submit Exam?</h3>
+    <p class="text-gray-500 text-sm mb-6">You have answered <strong id="modal-done" class="text-blue-900">0</strong> / <strong id="modal-total" class="text-blue-900">0</strong> questions.</p>
+    <div class="flex gap-3">
+      <button type="button" onclick="dongModal()" class="flex-1 py-3 rounded-xl border-2 border-gray-200 text-gray-600 font-mono text-xs hover:bg-gray-50 transition-colors">REVIEW</button>
+      <button type="button" onclick="submitBai()" class="flex-1 py-3 rounded-xl bg-blue-900 text-white font-mono text-xs hover:bg-blue-800 transition-colors">SUBMIT</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Đợi giao diện HTML tải xong 100% mới bắt đầu chạy code
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── Dữ liệu từ Jinja ──
+  const TOTAL_SECTIONS = {{ sections|length }};
+  const TOTAL_QUESTIONS = {{ questions|length }};
+
+  const questionToSection = {};
+  {%- set counter2 = namespace(i=1) %}
+  {%- set sidx2 = namespace(i=0) %}
+  {%- for ten_phan, nhom_cau_hoi in sections.items() %}
+    {%- set sidx2.i = sidx2.i + 1 %}
+    {%- for cau in nhom_cau_hoi %}
+  questionToSection[{{ counter2.i }}] = {{ sidx2.i }};
+      {%- set counter2.i = counter2.i + 1 %}
+    {%- endfor %}
+  {%- endfor %}
+
+  // ─────────────────────────────────────────
+  // CẤU HÌNH LOCALSTORAGE (LƯU TRỮ TRÌNH DUYỆT)
+  // ─────────────────────────────────────────
+  const TIMER_KEY = 'exam_timer_{{ ma_de }}';
+  const ANSWERS_KEY = 'exam_answers_{{ ma_de }}';
+  const SECTION_KEY = 'exam_section_{{ ma_de }}';
+  const FLAGS_KEY = 'exam_flags_{{ ma_de }}';
+  
+  let flaggedSet = new Set();
+  
+  // Try-catch để đảm bảo không bao giờ bị lỗi sập trang nếu localStorage có vấn đề
+  try {
+    let savedFlags = JSON.parse(localStorage.getItem(FLAGS_KEY));
+    if (Array.isArray(savedFlags)) {
+        flaggedSet = new Set(savedFlags);
+    }
+  } catch(e) {}
+
+  // Hàm bật/tắt cờ & đổi chữ
+  window.toggleFlag = function(idx) {
+    const btn = document.getElementById(`btn-flag-${idx}`);
+    const nav = document.getElementById(`nav-${idx}`);
+    const txt = document.getElementById(`flag-text-${idx}`);
+
+    if (flaggedSet.has(idx)) {
+      flaggedSet.delete(idx);
+      if(btn) btn.classList.remove('active');
+      if(nav) nav.classList.remove('is-flagged');
+      if(txt) txt.textContent = "Đặt cờ"; // Tắt cờ thì hiện lại chữ Đặt cờ
+    } else {
+      flaggedSet.add(idx);
+      if(btn) btn.classList.add('active');
+      if(nav) nav.classList.add('is-flagged');
+      if(txt) txt.textContent = "Bỏ cờ"; // Bật cờ thì hiện chữ Bỏ cờ
+    }
+    
+    localStorage.setItem(FLAGS_KEY, JSON.stringify([...flaggedSet]));
+  }
+
+  // Hàm phục hồi cờ & đổi chữ khi F5
+  function restoreFlags() {
+    flaggedSet.forEach(idx => {
+      const btn = document.getElementById(`btn-flag-${idx}`);
+      const nav = document.getElementById(`nav-${idx}`);
+      const txt = document.getElementById(`flag-text-${idx}`);
+      
+      if (btn) btn.classList.add('active');
+      if (nav) nav.classList.add('is-flagged');
+      if (txt) txt.textContent = "Bỏ cờ";
+    });
+  }
+
+  // ─────────────────────────────────────────
+  // TIMER (LƯU TỪNG GIÂY MỘT - KHÔNG BỊ LÀM TRÒN)
+  // ─────────────────────────────────────────
+  let totalSeconds = JSON.parse(localStorage.getItem(TIMER_KEY));
+  if (totalSeconds === null || isNaN(totalSeconds)) {
+      totalSeconds = 60 * 60; // 60 phút mặc định
+  }
+
+  const timerEl = document.getElementById('timer');
+  function updateTimer() {
+    const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
+    const s = (totalSeconds % 60).toString().padStart(2, '0');
+    timerEl.textContent = `${m}:${s}`;
+    
+    if (totalSeconds <= 300) timerEl.classList.add('warning');
+    if (totalSeconds <= 0) { clearInterval(timerInterval); window.submitBai(); return; }
+    
+    totalSeconds--;
+    
+    // Lưu thời gian MỖI GIÂY để độ chính xác là tuyệt đối 100% khi reload
+    localStorage.setItem(TIMER_KEY, totalSeconds);
+  }
+  
+  updateTimer(); // Chạy mốc giây đầu tiên ngay lập tức
+  const timerInterval = setInterval(updateTimer, 1000);
+
+  // ─────────────────────────────────────────
+  // SECTION PAGINATION (BẢO LƯU TRANG ĐANG LÀM)
+  // ─────────────────────────────────────────
+  let currentSection = parseInt(localStorage.getItem(SECTION_KEY)) || 1;
+
+  window.goToSection = function(n) {
+    if (n < 1 || n > TOTAL_SECTIONS) return;
+    
+    document.querySelectorAll('.section-page').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.section-tab').forEach(el => el.classList.remove('active-tab'));
+    
+    currentSection = n;
+    localStorage.setItem(SECTION_KEY, currentSection); 
+    
+    document.getElementById(`section-page-${currentSection}`)?.classList.add('active');
+    document.getElementById(`stab-${currentSection}`)?.classList.add('active-tab');
+    
+    document.getElementById('header-section-label').textContent = `${currentSection} / ${TOTAL_SECTIONS}`;
+    document.getElementById('section-progress-bar').style.width = `${((currentSection - 1) / (TOTAL_SECTIONS - 1)) * 100}%`;
+    window.scrollTo({ top: 0 });
+    updateNavHighlight();
+  }
+
+  function updateNavHighlight() {
+    for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+      const cell = document.getElementById(`nav-${i}`);
+      if (cell) cell.classList.toggle('current-section', questionToSection[i] === currentSection);
+    }
+  }
+
+  window.jumpToQuestion = function(globalIndex) {
+    if (questionToSection[globalIndex] !== currentSection) {
+        window.goToSection(questionToSection[globalIndex]);
+    }
+    // Cuộn trang mượt mà tới đúng vị trí câu hỏi
+    setTimeout(() => document.getElementById(`q-card-${globalIndex}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 200);
+  }
+
+  // ─────────────────────────────────────────
+  // ANSWER TRACKING (BẢO LƯU ĐÁP ÁN)
+  // ─────────────────────────────────────────
+  const answeredSet = new Set();
+
+  function saveAnswerToLocal(idx, val) {
+    let saved = JSON.parse(localStorage.getItem(ANSWERS_KEY)) || {};
+    if (val) saved[idx] = val;
+    else delete saved[idx];
+    localStorage.setItem(ANSWERS_KEY, JSON.stringify(saved));
+  }
+
+  function toggleAnswer(idx, isAnswered) {
+    if (isAnswered) {
+      answeredSet.add(idx);
+      document.getElementById(`nav-${idx}`)?.classList.add('answered');
+    } else {
+      answeredSet.delete(idx);
+      document.getElementById(`nav-${idx}`)?.classList.remove('answered');
+    }
+    
+    const countEl = document.getElementById('count-done');
+    if (countEl) {
+        countEl.textContent = answeredSet.size;
+    }
+  }
+
+  window.chonDapAn = function(el, idx, key) {
+    el.closest('.q-card').querySelectorAll('.opt-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    el.querySelector('input[type="radio"]').checked = true;
+    
+    toggleAnswer(idx, true);
+    saveAnswerToLocal(idx, key); 
+  }
+
+  document.querySelectorAll('.tl-input').forEach(inp => {
+    inp.addEventListener('input', function() { 
+      const idx = parseInt(this.dataset.globalIndex);
+      const val = this.value.trim();
+      toggleAnswer(idx, !!val); 
+      saveAnswerToLocal(idx, val); 
+    });
+  });
+
+  // ─────────────────────────────────────────
+  // HÀM PHỤC HỒI ĐÁP ÁN VÀ CỜ (CHẠY SAU KHI LOAD XONG)
+  // ─────────────────────────────────────────
+  function restoreAnswers() {
+    let saved = JSON.parse(localStorage.getItem(ANSWERS_KEY)) || {};
+    for (let idx in saved) {
+      let val = saved[idx];
+      let card = document.getElementById(`q-card-${idx}`);
+      if (!card) continue;
+
+      let radio = card.querySelector(`input[type="radio"][value="${val}"]`);
+      if (radio) {
+        radio.checked = true;
+        let optCard = radio.closest('.opt-card');
+        if (optCard) optCard.classList.add('selected');
+        toggleAnswer(parseInt(idx), true);
+        continue;
+      }
+
+      let textInput = card.querySelector('.tl-input');
+      if (textInput) {
+        textInput.value = val;
+        toggleAnswer(parseInt(idx), true);
+      }
+    }
+  }
+
+  // Đợi 150 mili-giây để trình duyệt vẽ xong giao diện rồi mới điền đáp án
+  setTimeout(() => {
+    restoreAnswers();
+    restoreFlags(); 
+    window.goToSection(currentSection);
+  }, 150);
+
+  // ─────────────────────────────────────────
+  // MODAL & SUBMIT
+  // ─────────────────────────────────────────
+  window.xacNhanNopBai = function() {
+    document.getElementById('modal-done').textContent = answeredSet.size;
+    document.getElementById('modal-total').textContent = TOTAL_QUESTIONS;
+    document.getElementById('modal-overlay').classList.remove('hidden');
+  }
+
+  window.dongModal = function() { 
+    document.getElementById('modal-overlay').classList.add('hidden'); 
+  }
+
+  window.submitBai = function() { 
+    // 1. DỪNG HẲN ĐỒNG HỒ ĐỂ NÓ KHÔNG LÉN LƯU ĐÈ NỮA
+    clearInterval(timerInterval);
+
+    // 2. Nộp bài xong phải dọn dẹp sạch sẽ bộ nhớ để thi đề khác không bị lỗi
+    localStorage.removeItem(TIMER_KEY); 
+    localStorage.removeItem(ANSWERS_KEY);
+    localStorage.removeItem(SECTION_KEY);
+    localStorage.removeItem(FLAGS_KEY);
+    
+    // 3. Gửi bài
+    document.getElementById('exam-form').submit(); 
+  }
+
+  // ─────────────────────────────────────────
+  // CHẶN BẤM PHÍM ENTER GÂY NỘP BÀI SỚM (VÀ LỖI RESET GIỜ)
+  // ─────────────────────────────────────────
+  document.getElementById('exam-form').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Chặn hành động nộp bài mặc định của trình duyệt
+    }
+  });
+
+}); // Đây là dấu ngoặc đóng cuối cùng của file
+</script>
+</body>
+</html>

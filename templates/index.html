@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>English Exam Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Playfair Display','Georgia','serif'],
+            sans: ['DM Sans','sans-serif'],
+            mono: ['DM Mono','monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');    :root {
+      --ink: #0f1523;
+      --parchment: #faf9f6;
+      --accent: #1e3a8a;
+      --accent-hover: #152a6e;
+      --accent-light: #dbeafe;
+      --border: #e5e3dc;
+      --muted: #6b7280;
+      --gold: #b45309;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--parchment);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* ── Grain overlay ── */
+    .grain {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.35;
+    }
+
+    /* ── Decorative background shapes ── */
+    .bg-deco {
+      position: fixed; pointer-events: none; z-index: 0;
+    }
+    .bg-circle-1 {
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(30,58,138,0.05) 0%, transparent 70%);
+      top: -200px; right: -200px;
+      animation: floatA 12s ease-in-out infinite;
+    }
+    .bg-circle-2 {
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(180,83,9,0.04) 0%, transparent 70%);
+      bottom: -100px; left: -100px;
+      animation: floatB 16s ease-in-out infinite;
+    }
+
+    @keyframes floatA {
+      0%, 100% { transform: translate(0,0); }
+      50% { transform: translate(-20px, 20px); }
+    }
+    @keyframes floatB {
+      0%, 100% { transform: translate(0,0); }
+      50% { transform: translate(15px, -15px); }
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: relative; z-index: 10;
+      border-bottom: 1px solid var(--border);
+      background: rgba(250,249,246,0.9);
+      backdrop-filter: blur(16px);
+      padding: 0 40px;
+      height: 58px;
+      display: flex; align-items: center; justify-content: space-between;
+      animation: navSlideDown 0.5s ease both;
+    }
+    @keyframes navSlideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo {
+      width: 34px; height: 34px;
+      background: var(--accent);
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo span {
+      font-family: 'DM Mono', monospace;
+      font-weight: 600; font-size: 11px;
+      color: #f5c842; letter-spacing: 0.05em;
+    }
+    .nav-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; font-size: 16px; color: var(--ink);
+    }
+    .nav-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.15em; color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      flex: 1; position: relative; z-index: 5;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 64px 24px 48px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease 0.1s both;
+    }
+
+    .hero-title {
+      font-family: 'Quicksand', sans-serif;
+      font-size: clamp(34px, 6vw, 54px);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 30px;
+      letter-spacing: 0.02em;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease 0.2s both;
+    }
+    .hero-title .accent { color: var(--accent); font-style: italic; }
+
+    .hero-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px; color: var(--muted);
+      max-width: 420px; line-height: 1.75;
+      margin-bottom: 52px;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease 0.3s both;
+    }
+
+    /* ── EXAM CARD ── */
+    .exam-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 40px;
+      width: 100%; max-width: 540px;
+      box-shadow: 0 4px 32px rgba(15,21,35,0.07), 0 1px 4px rgba(0,0,0,0.04);
+      opacity: 0;
+      animation: fadeInUp 0.7s ease 0.4s both;
+    }
+
+    .field-label {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 16px; display: block;
+      text-align: left;
+    }
+
+    /* Exam grid */
+    .exam-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .exam-option {
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 16px;
+      cursor: pointer;
+      transition: all 0.22s cubic-bezier(.34,1.56,.64,1);
+      background: var(--parchment);
+      text-align: left; user-select: none;
+      position: relative; overflow: hidden;
+    }
+    .exam-option::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: var(--accent-light);
+      opacity: 0;
+      transition: opacity 0.2s;
+      border-radius: inherit;
+    }
+    .exam-option:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(30,58,138,0.12);
+    }
+    .exam-option:hover::after { opacity: 1; }
+    .exam-option.selected {
+      border-color: var(--accent);
+      background: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(30,58,138,0.15);
+    }
+    .exam-option input[type="radio"] { display: none; }
+
+    .exam-option-inner { position: relative; z-index: 1; }
+    .exam-option-sub {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 5px;
+    }
+    .exam-option-name {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 20px; font-weight: 700;
+      color: var(--accent); line-height: 1.2;
+    }
+    .exam-option-check {
+      position: absolute; top: 10px; right: 12px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transform: scale(0);
+      transition: all 0.22s cubic-bezier(.34,1.56,.64,1);
+      z-index: 2;
+    }
+    .exam-option.selected .exam-option-check {
+      opacity: 1; transform: scale(1);
+    }
+    .exam-option-check svg { width: 10px; height: 10px; stroke: #fff; stroke-width: 2.5; }
+
+    /* Submit */
+    .btn-start {
+      width: 100%; padding: 15px;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 12px;
+      font-family: 'Quicksand', sans-serif;  /* Đổi font ở đây */
+      font-size: 15px; font-weight: 700;      /* Tăng size chữ */
+      letter-spacing: 0.1em; text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      position: relative; overflow: hidden;
+    }
+    .btn-start::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+    }
+    .btn-start:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 10px 30px rgba(30,58,138,0.35);
+      transform: translateY(-2px);
+    }
+    .btn-start:active { transform: translateY(0); }
+
+    /* Info bar */
+    .info-bar {
+      margin-top: 24px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 13px; font-weight: 600; color: var(--muted);
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; flex-wrap: wrap;
+      opacity: 0; animation: fadeIn 0.6s ease 0.8s both;
+    }
+    .info-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--border); }
+    .info-bar strong { color: var(--gold); font-weight: 700; }
+
+    /* Footer */
+    footer {
+      position: relative; z-index: 5;
+      text-align: center; padding: 20px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 12px; font-weight: 600; color: #b0a898;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .exam-card { padding: 28px 24px; }
+      nav { padding: 0 20px; }
+      .nav-tag { display: none; }
+      .exam-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  
+</head>
+<body>
+
+  <div class="grain"></div>
+  <div class="bg-deco bg-circle-1"></div>
+  <div class="bg-deco bg-circle-2"></div>
+
+  <nav>
+    <a href="/" class="nav-brand">
+      <div class="nav-logo"><span>EN</span></div>
+      <span class="nav-name">English Exam Portal</span>
+    </a>
+    <span class="nav-tag">Practice Test System</span>
+  </nav>
+
+  <main class="hero">
+    <h1 class="hero-title">KIỂM TRA TIẾNG ANH</h1>
+    
+    <form class="exam-card" onsubmit="return handleSubmit(event)">
+      <label class="field-label">Lựa chọn đề thi để bắt đầu</label>
+      <div class="exam-grid" id="exam-grid">
+        {% for de in danh_sach_de %}
+        <label class="exam-option" onclick="selectDe(this)">
+          <input type="radio" name="de_thi" value="{{ de }}" {% if loop.first %}checked{% endif %}/>
+          <div class="exam-option-check">
+            <svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3"/></svg>
+          </div>
+          <div class="exam-option-inner">
+            <div class="exam-option-sub">Đề thi</div>
+            <div class="exam-option-name">{{ de.replace('_',' ') }}</div>
+          </div>
+        </label>
+        {% endfor %}
+      </div>
+
+      <button class="btn-start" type="submit">
+        <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <polygon points="5,3 19,12 5,21"/>
+        </svg>
+        Bắt đầu làm bài
+      </button>
+    </form>
+
+    <div class="info-bar">
+      <span>Thời gian: <strong>60 phút</strong></span>
+      <span class="info-dot"></span>
+      <span>Không sử dụng tài liệu</span>
+      <span class="info-dot"></span>
+      <span>Tự động lưu tiến trình</span>
+    </div>
+  </main>
+
+  <footer>© 2024 English Exam Portal · All rights reserved.</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mark first option selected
+      const first = document.querySelector('.exam-option');
+      if (first) first.classList.add('selected');
+
+      // Stagger exam option animations
+      document.querySelectorAll('.exam-option').forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(12px)';
+        el.style.transition = `opacity 0.4s ease ${0.5 + i * 0.06}s, transform 0.4s ease ${0.5 + i * 0.06}s, border-color 0.22s, background 0.22s, box-shadow 0.22s`;
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+          }, 10);
+        });
+      });
+    });
+
+    function selectDe(el) {
+      document.querySelectorAll('.exam-option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+      el.querySelector('input[type="radio"]').checked = true;
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const de = document.querySelector('input[name="de_thi"]:checked');
+      if (!de) return false;
+      // Redirect thẳng vào trang exam, không truyền tham số tên nữa
+      window.location.href = `/exam/${de.value}`;
+      return false;
+    }
+  </script>
+</body>
+</html>

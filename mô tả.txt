@@ -1,0 +1,53 @@
+1. Khu vực Dữ liệu (Kho chứa nguyên liệu)
+📄 questions.json (Kho đề thi):
+
+Tác dụng: Đây là nơi lưu trữ toàn bộ nội dung câu hỏi, đáp án A B C D, và đáp án đúng.
+
+Khi nào cần sửa? Khi bạn muốn thêm đề mới, sửa lỗi chính tả trong câu hỏi, đổi đáp án... Bạn chỉ cần mở file này ra sửa chữ, không cần đụng gì đến code lập trình cả.
+
+📄 google_key.json (Chìa khóa kho):
+
+Tác dụng: Đây là tờ giấy ủy quyền để code của bạn được phép mở cửa file Google Sheets.
+
+Khi nào cần sửa? KHÔNG BAO GIỜ. Cứ để nó nằm im đó.
+
+2. Khu vực Giao diện (Mặt tiền, bàn ghế, trang trí)
+Thư mục templates chính là "bộ mặt" của trang web. Tất cả những gì học sinh nhìn thấy (màu sắc, nút bấm, chữ nghĩa, hiệu ứng) đều nằm ở đây.
+
+🖥️ index.html (Phòng chờ / Sảnh chính):
+
+Tác dụng: Trang đầu tiên học sinh bước vào. Gồm ô nhập tên và nút chọn đề.
+
+Khi nào cần sửa? Khi bạn muốn đổi lời chào (Ví dụ: "Chào mừng đến với lớp cô Xuân"), thêm logo trường, đổi màu nền trang chủ.
+
+🖥️ exam.html (Phòng làm bài thi):
+
+Tác dụng: Nơi hiển thị đồng hồ đếm ngược, danh sách câu hỏi và bảng số bên tay phải.
+
+Khi nào cần sửa? Khi bạn muốn chỉnh thời gian thi (Ví dụ đổi từ 60 phút thành 90 phút), đổi màu lúc học sinh bấm chọn đáp án, sửa chữ ở nút "Nộp bài".
+
+🖥️ ketqua.html (Bảng điểm & Chữa bài):
+
+Tác dụng: Nơi hiện điểm to đùng và hiển thị lại đề thi kèm màu xanh/đỏ báo đúng sai.
+
+Khi nào cần sửa? Khi bạn muốn đổi câu chúc mừng (Ví dụ: "Giỏi quá em ơi"), hoặc đổi màu bôi đậm đáp án.
+
+3. Khu vực Code Logic (Bộ não / Quản lý nhà hàng)
+⚙️ app.py (Trái tim của hệ thống):
+
+Tác dụng: Đây là "bộ não" điều hành tất cả. Nó làm nhiệm vụ: Đọc kho questions.json -> Mang đề thi vứt sang exam.html cho học sinh làm -> Thu bài về -> Tính toán xem đúng bao nhiêu câu -> Ghi tên vào Google Sheets -> Chuyển sang trang ketqua.html.
+
+Khi nào cần sửa? Khi bạn muốn thay đổi cách tính điểm (Ví dụ: mỗi câu 0.25 điểm thay vì 1 điểm), muốn tạo thêm một trang web mới (ví dụ /gioi-thieu), hoặc thay link file Google Sheets.
+
+4. Các file Cấu hình (Hậu cần)
+📋 requirements.txt:
+
+Tác dụng: Là "đơn đặt hàng" gửi cho máy chủ Render. Nó bảo máy chủ là: "Hãy cài cho tôi Flask và gspread nhé".
+
+Khi nào cần sửa? Chỉ khi bạn cài thêm một công cụ mới của Python (ví dụ sau này bạn muốn làm chức năng gửi email thì phải cài thêm thư viện gửi email).
+
+🚫 .gitignore:
+
+Tác dụng: Danh sách các file cấm không cho tải lên mạng (như file PDF nặng hay file chìa khóa bảo mật).
+
+Khi nào cần sửa? Khi bạn có thêm file nhạy cảm hoặc file rác không muốn đưa lên GitHub.

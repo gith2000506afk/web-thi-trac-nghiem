@@ -1,0 +1,289 @@
+{
+  "De_06": [
+    {
+      "id_cau": 1,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "If payment is not made by the _______ date, 10% will be added to the bill.",
+      "A": "due", "B": "time", "C": "recent", "D": "play",
+      "dap_an_dung": "A"
+    },
+    {
+      "id_cau": 2,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "The farmers were aware _______ the impact of weeds on their crops.",
+      "A": "of", "B": "at", "C": "for", "D": "to",
+      "dap_an_dung": "A"
+    },
+    {
+      "id_cau": 3,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "She asked if we had _______ questions.",
+      "A": "some", "B": "the", "C": "any", "D": "a",
+      "dap_an_dung": "C"
+    },
+    {
+      "id_cau": 4,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "It's the house _______ door is painted red.",
+      "A": "which", "B": "whose", "C": "that", "D": "X",
+      "dap_an_dung": "B"
+    },
+    {
+      "id_cau": 5,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "_______ words you don't know in the dictionary.",
+      "A": "Look off", "B": "Turn on", "C": "Find out", "D": "Look up",
+      "dap_an_dung": "D"
+    },
+    {
+      "id_cau": 6,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "I don't know how to dance. I wish I _______ how to dance.",
+      "A": "knew", "B": "know", "C": "didn't know", "D": "did",
+      "dap_an_dung": "A"
+    },
+    {
+      "id_cau": 7,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "_______ they spent a lot of money on the film, it wasn't a big success.",
+      "A": "When", "B": "Although", "C": "Nevertheless", "D": "However",
+      "dap_an_dung": "B"
+    },
+    {
+      "id_cau": 8,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "The rules didn't specify _______ to speak to in case of an emergency.",
+      "A": "what", "B": "who", "C": "asking", "D": "will ask",
+      "dap_an_dung": "B"
+    },
+    {
+      "id_cau": 9,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "She left her office key at home _______ which caused her to be late for work yesterday.",
+      "A": "by mistake", "B": "with pleasure", "C": "by heart", "D": "by hand",
+      "dap_an_dung": "A"
+    },
+    {
+      "id_cau": 10,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "The street is _______ than it used to be.",
+      "A": "more", "B": "narrower", "C": "narrow", "D": "the narrower",
+      "dap_an_dung": "B"
+    },
+    {
+      "id_cau": 11,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "A: It's quite high, but it's much lower than Mount Fansipan. B: _______",
+      "A": "Is Fansipan the highest mountain in the world?", "B": "Do you want to spend this summer trekking Mount Tà Xùa?", "C": "How about Mount Tà Xùa?", "D": "Let's go there.",
+      "dap_an_dung": "C"
+    },
+    {
+      "id_cau": 12,
+      "phan_thi": "I. Choose the letter (A, B, C or D) that indicates the best answer to each of the following questions. (3pts)",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "Choose the best arrangement:\na. Amy: Yes! I've been growing herbs lately.\nb. Oliver: Oh, cool! What got you into it?\nc. Oliver: That's really cool. I might just have to start my own little garden!\nd. Amy: I wanted fresh ingredients for cooking, and it's so satisfying to grow them myself.\ne. Oliver: Hey, Amy! Are you still into gardening?",
+      "A": "c-d-b-a-e", "B": "e-d-c-a-b", "C": "c-a-e-d-b", "D": "e-a-b-d-c",
+      "dap_an_dung": "D"
+    },
+    {
+      "id_cau": 13,
+      "phan_thi": "II. Supply the correct form of the word in bold to complete each of the following sentences. (1pt)",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "His parents won't let him play ice hockey because they think it is too _______ (DANGER).",
+      "dap_an_chap_nhan": ["dangerous", "Dangerous"]
+    },
+    {
+      "id_cau": 14,
+      "phan_thi": "II. Supply the correct form of the word in bold to complete each of the following sentences. (1pt)",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "We are one of the largest _______ of employment in the area. (PROVIDE)",
+      "dap_an_chap_nhan": ["providers", "Providers"]
+    },
+    {
+      "id_cau": 15,
+      "phan_thi": "II. Supply the correct form of the word in bold to complete each of the following sentences. (1pt)",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "Greener is an organisation which _______ community activities. (SUPPORT)",
+      "dap_an_chap_nhan": ["supports", "Supports"]
+    },
+    {
+      "id_cau": 16,
+      "phan_thi": "II. Supply the correct form of the word in bold to complete each of the following sentences. (1pt)",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "You can get on a train and go _______ to the ski resort. (DIRECT)",
+      "dap_an_chap_nhan": ["directly", "Directly"]
+    },
+    {
+      "id_cau": 17,
+      "phan_thi": "III. Complete each of the following sentences with the correct tense of the verb in bold. (1pt)",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "My father _______ (work) for her company since our family moved to this area.",
+      "dap_an_chap_nhan": ["has been working", "has worked"]
+    },
+    {
+      "id_cau": 18,
+      "phan_thi": "III. Complete each of the following sentences with the correct tense of the verb in bold. (1pt)",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "I don't know many English words. I wish I _______ (know) more English words.",
+      "dap_an_chap_nhan": ["knew", "Knew"]
+    },
+    {
+      "id_cau": 19,
+      "phan_thi": "III. Complete each of the following sentences with the correct tense of the verb in bold. (1pt)",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "Please download this app which _______ (help) you navigate a new place.",
+      "dap_an_chap_nhan": ["helps", "Helps", "will help"]
+    },
+    {
+      "id_cau": 20,
+      "phan_thi": "III. Complete each of the following sentences with the correct tense of the verb in bold. (1pt)",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "My friends fancy _______ (watch) Taylor Swift performing live.",
+      "dap_an_chap_nhan": ["watching", "Watching"]
+    },
+    {
+      "id_cau": 21,
+      "phan_thi": "IV. Look at the sign or the notice (0-4) and choose the best answer. (1pt)",
+      "loai_cau_hoi": "trac_nghiem",
+      "hinh_anh": "/static/de6_1.jpg",
+      "A": "Electricity is in higher place.", "B": "Be careful! High-tech devices!", "C": "Serious injury or death may occur.", "D": "Voltage is not high enough.",
+      "dap_an_dung": "C"
+    },
+    {
+      "id_cau": 22,
+      "phan_thi": "IV. Look at the sign or the notice (0-4) and choose the best answer. (1pt)",
+      "loai_cau_hoi": "trac_nghiem",
+      "hinh_anh": "/static/de6_2.jpg",
+      "A": "There is a nearby medical center.", "B": "We should take patients to the hospital.", "C": "Hospitals are permitted to build here.", "D": "The Red Cross is available.",
+      "dap_an_dung": "A"
+    },
+    {
+      "id_cau": 23,
+      "phan_thi": "IV. Look at the sign or the notice (0-4) and choose the best answer. (1pt)",
+      "loai_cau_hoi": "trac_nghiem",
+      "hinh_anh": "/static/de6_3.png",
+      "A": "You have 15 minutes to get your car.", "B": "You can pick up your car after 10 p.m.", "C": "You can stay in the mall until 10 p.m if you walk home.", "D": "You have to spend 15 minutes to get your car.",
+      "dap_an_dung": "A"
+    },
+    {
+      "id_cau": 24,
+      "phan_thi": "IV. Look at the sign or the notice (0-4) and choose the best answer. (1pt)",
+      "loai_cau_hoi": "trac_nghiem",
+      "hinh_anh": "/static/de6_4.png",
+      "A": "Let the assistant know if you think there's a mistake on your receipt.", "B": "Keep your receipt because you might need to change something you bought.", "C": "Tell the assistant if you've lost the receipt for something you bought.", "D": "After leaving the shop, you can call the assistant for help.",
+      "dap_an_dung": "A"
+    },
+    {
+      "id_cau": 25,
+      "phan_thi": "V. Read the text and choose the letter A, B, C or D to indicate the best answer to each of the following questions. Write your answer in the box provided. (1pt)",
+      "doan_van": "Travel writer\n\nTim Greenwood lives in Oakland, USA. He has written about Cambodia, Thailand and India. At the moment he is writing a book about Nepal.\n\nTim, how did you start travelling?\nWe never travelled as a family, but when I was a teenager I saw movies like Lawrence of Arabia and they made me want to travel. I left college at the age of 21 and went to Europe alone. That trip didn't go well – I was too young and didn't know how to look after myself.\n\nHow did you start writing?\nI've loved writing since I was ten – I've never wanted any other career. At 21, I wrote for my weekly college paper and then started writing travel articles. At first, none of the travel magazines I sent them to wanted to buy them, but that slowly changed. It took two or three years, I guess.\n\nWhat do you find difficult about writing?\nIt is easy to spend all my time travelling and then not have time to open up my laptop and work! Also, it's hard to earn enough money. I'll never stop writing, but one day I may have to do a few hours a week teaching just to pay the bills.\n\nWhat's the best thing about being a travel writer?\nI get letters from young people who've read my books and articles and enjoy my work. I just love that!",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "1. As a teenager, Tim _______",
+      "A": "went on trips with his parents.", "B": "became interested in seeing the world.", "C": "spent too much time watching TV.", "D": "did some extra work.",
+      "dap_an_dung": "B"
+    },
+    {
+      "id_cau": 26,
+      "phan_thi": "V. Read the text and choose the letter A, B, C or D to indicate the best answer to each of the following questions. Write your answer in the box provided. (1pt)",
+      "doan_van": "Travel writer\n\nTim Greenwood lives in Oakland, USA. He has written about Cambodia, Thailand and India. At the moment he is writing a book about Nepal.\n\nTim, how did you start travelling?\nWe never travelled as a family, but when I was a teenager I saw movies like Lawrence of Arabia and they made me want to travel. I left college at the age of 21 and went to Europe alone. That trip didn't go well – I was too young and didn't know how to look after myself.\n\nHow did you start writing?\nI've loved writing since I was ten – I've never wanted any other career. At 21, I wrote for my weekly college paper and then started writing travel articles. At first, none of the travel magazines I sent them to wanted to buy them, but that slowly changed. It took two or three years, I guess.\n\nWhat do you find difficult about writing?\nIt is easy to spend all my time travelling and then not have time to open up my laptop and work! Also, it's hard to earn enough money. I'll never stop writing, but one day I may have to do a few hours a week teaching just to pay the bills.\n\nWhat's the best thing about being a travel writer?\nI get letters from young people who've read my books and articles and enjoy my work. I just love that!",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "2. What does Tim say about his trip to Europe?",
+      "A": "He didn't have time to see everything.", "B": "It was more fun than college.", "C": "He had many time to see.", "D": "It was not a great success.",
+      "dap_an_dung": "D"
+    },
+    {
+      "id_cau": 27,
+      "phan_thi": "V. Read the text and choose the letter A, B, C or D to indicate the best answer to each of the following questions. Write your answer in the box provided. (1pt)",
+      "doan_van": "Travel writer\n\nTim Greenwood lives in Oakland, USA. He has written about Cambodia, Thailand and India. At the moment he is writing a book about Nepal.\n\nTim, how did you start travelling?\nWe never travelled as a family, but when I was a teenager I saw movies like Lawrence of Arabia and they made me want to travel. I left college at the age of 21 and went to Europe alone. That trip didn't go well – I was too young and didn't know how to look after myself.\n\nHow did you start writing?\nI've loved writing since I was ten – I've never wanted any other career. At 21, I wrote for my weekly college paper and then started writing travel articles. At first, none of the travel magazines I sent them to wanted to buy them, but that slowly changed. It took two or three years, I guess.\n\nWhat do you find difficult about writing?\nIt is easy to spend all my time travelling and then not have time to open up my laptop and work! Also, it's hard to earn enough money. I'll never stop writing, but one day I may have to do a few hours a week teaching just to pay the bills.\n\nWhat's the best thing about being a travel writer?\nI get letters from young people who've read my books and articles and enjoy my work. I just love that!",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "3. When Tim was 21, he couldn't _______",
+      "A": "travel as much as he wanted to.", "B": "decide what to write about.", "C": "sell many of his articles.", "D": "earn more from writing.",
+      "dap_an_dung": "C"
+    },
+    {
+      "id_cau": 28,
+      "phan_thi": "V. Read the text and choose the letter A, B, C or D to indicate the best answer to each of the following questions. Write your answer in the box provided. (1pt)",
+      "doan_van": "Travel writer\n\nTim Greenwood lives in Oakland, USA. He has written about Cambodia, Thailand and India. At the moment he is writing a book about Nepal.\n\nTim, how did you start travelling?\nWe never travelled as a family, but when I was a teenager I saw movies like Lawrence of Arabia and they made me want to travel. I left college at the age of 21 and went to Europe alone. That trip didn't go well – I was too young and didn't know how to look after myself.\n\nHow did you start writing?\nI've loved writing since I was ten – I've never wanted any other career. At 21, I wrote for my weekly college paper and then started writing travel articles. At first, none of the travel magazines I sent them to wanted to buy them, but that slowly changed. It took two or three years, I guess.\n\nWhat do you find difficult about writing?\nIt is easy to spend all my time travelling and then not have time to open up my laptop and work! Also, it's hard to earn enough money. I'll never stop writing, but one day I may have to do a few hours a week teaching just to pay the bills.\n\nWhat's the best thing about being a travel writer?\nI get letters from young people who've read my books and articles and enjoy my work. I just love that!",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "4. What's the best thing about being a travel writer?",
+      "A": "hearing from his fans.", "B": "giving advice to people.", "C": "meeting other young writers.", "D": "changing his job.",
+      "dap_an_dung": "A"
+    },
+    {
+      "id_cau": 29,
+      "phan_thi": "VI. Read the notice and choose the best word or phrase for each space. Write your answer in the box provided. (1pt)",
+      "doan_van": "THREE TIPS TO HELP YOU MEMORIZE NEW WORDS\n\n1. Put the new word in (1) _______ phrase or sentence. You must know the context for it!\n\n2. Group similar words together in lists. Make vocabulary in lists of words (2) _______ similar meanings.\n\n3. (3) _______ sure you understand the definition, and then write that definition in your own words. Don't just memorize the definition you find in the dictionary for a new word.\n\nDo you have any (4) _______ tips for memorizing new words? Let us know!",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "1.",
+      "A": "a", "B": "an", "C": "the", "D": "Ø",
+      "dap_an_dung": "A"
+    },
+    {
+      "id_cau": 30,
+      "phan_thi": "VI. Read the notice and choose the best word or phrase for each space. Write your answer in the box provided. (1pt)",
+      "doan_van": "THREE TIPS TO HELP YOU MEMORIZE NEW WORDS\n\n1. Put the new word in (1) _______ phrase or sentence. You must know the context for it!\n\n2. Group similar words together in lists. Make vocabulary in lists of words (2) _______ similar meanings.\n\n3. (3) _______ sure you understand the definition, and then write that definition in your own words. Don't just memorize the definition you find in the dictionary for a new word.\n\nDo you have any (4) _______ tips for memorizing new words? Let us know!",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "2.",
+      "A": "of", "B": "for", "C": "on", "D": "with",
+      "dap_an_dung": "D"
+    },
+    {
+      "id_cau": 31,
+      "phan_thi": "VI. Read the notice and choose the best word or phrase for each space. Write your answer in the box provided. (1pt)",
+      "doan_van": "THREE TIPS TO HELP YOU MEMORIZE NEW WORDS\n\n1. Put the new word in (1) _______ phrase or sentence. You must know the context for it!\n\n2. Group similar words together in lists. Make vocabulary in lists of words (2) _______ similar meanings.\n\n3. (3) _______ sure you understand the definition, and then write that definition in your own words. Don't just memorize the definition you find in the dictionary for a new word.\n\nDo you have any (4) _______ tips for memorizing new words? Let us know!",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "3.",
+      "A": "Take", "B": "Have", "C": "Make", "D": "Come",
+      "dap_an_dung": "C"
+    },
+    {
+      "id_cau": 32,
+      "phan_thi": "VI. Read the notice and choose the best word or phrase for each space. Write your answer in the box provided. (1pt)",
+      "doan_van": "THREE TIPS TO HELP YOU MEMORIZE NEW WORDS\n\n1. Put the new word in (1) _______ phrase or sentence. You must know the context for it!\n\n2. Group similar words together in lists. Make vocabulary in lists of words (2) _______ similar meanings.\n\n3. (3) _______ sure you understand the definition, and then write that definition in your own words. Don't just memorize the definition you find in the dictionary for a new word.\n\nDo you have any (4) _______ tips for memorizing new words? Let us know!",
+      "loai_cau_hoi": "trac_nghiem",
+      "noi_dung_cau_hoi": "4.",
+      "A": "another", "B": "other", "C": "the other", "D": "others",
+      "dap_an_dung": "B"
+    },
+    {
+      "id_cau": 33,
+      "phan_thi": "VII. Use the given words or phrases to make complete sentence. (1pt)\n CÁC CÂU VIẾT NHỚ ĐỂ Ý DẤU CÂU CUỐI CÙNG VÌ THIẾU DẤU CÂU SẼ KHÔNG TÍNH ĐIỂM NHÉ !!!",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "When we / arrive / guide / tell / the story / a cruel king.",
+      "dap_an_chap_nhan": ["When we arrived, the guide told us the story of a cruel king.", "When we arrived, the guide told the story of a cruel king."]
+    },
+    {
+      "id_cau": 34,
+      "phan_thi": "VII. Use the given words or phrases to make complete sentence. (1pt)\n CÁC CÂU VIẾT NHỚ ĐỂ Ý DẤU CÂU CUỐI CÙNG VÌ THIẾU DẤU CÂU SẼ KHÔNG TÍNH ĐIỂM NHÉ !!!",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "Visitors / can't help / take photos / amazing scenery / Bản Giốc Waterfalls.",
+      "dap_an_chap_nhan": ["Visitors can't help taking photos of the amazing scenery of Ban Gioc Waterfalls."]
+    },
+    {
+      "id_cau": 35,
+      "phan_thi": "VIII. Complete each of the following sentences so that it is closest in meaning to the original one. (1pt)\n CÁC CÂU VIẾT NHỚ ĐỂ Ý DẤU CÂU CUỐI CÙNG VÌ THIẾU DẤU CÂU SẼ KHÔNG TÍNH ĐIỂM NHÉ !!!",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "Unless you leave home now, you will miss the flight. (DON'T)",
+      "dap_an_chap_nhan": ["If you don't leave home now, you will miss the flight", 
+        "If you do not leave home now, you will miss the flight"
+      ]
+    },
+    {
+      "id_cau": 36,
+      "phan_thi": "VIII. Complete each of the following sentences so that it is closest in meaning to the original one. (1pt)\n CÁC CÂU VIẾT NHỚ ĐỂ Ý DẤU CÂU CUỐI CÙNG VÌ THIẾU DẤU CÂU SẼ KHÔNG TÍNH ĐIỂM NHÉ !!!",
+      "loai_cau_hoi": "tu_luan_ngan",
+      "noi_dung_cau_hoi": "Make sure your bags are tagged. You can find them easily. (IN ORDER TO) \nMake sure ______________ them easily.",
+      "dap_an_chap_nhan": ["in order to find them easily"]
+    }
+  ]}
