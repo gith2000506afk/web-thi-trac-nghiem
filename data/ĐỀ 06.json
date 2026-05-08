@@ -315,8 +315,8 @@
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "Unless you leave home now, you will miss the flight. (DON'T)",
       "dap_an_chap_nhan": [
-        "If you don't leave home now, you will miss the flight",
-        "If you do not leave home now, you will miss the flight"
+        "If you don't leave home now, you will miss the flight.",
+        "If you do not leave home now, you will miss the flight."
       ],
       "giai_thich": "Câu điều kiện loại 1: Unless = If ... not (Nếu không... thì)."
     },
