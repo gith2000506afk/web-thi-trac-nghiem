@@ -112,7 +112,8 @@ def nop_bai():
         ket_qua = {
             'id_cau': cau.get('id_cau', ''),
             'loai_cau_hoi': loai,
-            'noi_dung_cau_hoi': cau.get('noi_dung_cau_hoi', ''), 
+            'noi_dung_cau_hoi': cau.get('noi_dung_cau_hoi', ''),
+            'giai_thich': cau.get('giai_thich', ''),  # <--- THÊM DÒNG NÀY (Dùng .get để tránh lỗi nếu câu nào chưa có giải thích)
             'dung': False,
             'dap_an_hs': '',
             'dap_an_chuan': ''

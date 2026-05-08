@@ -6,7 +6,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "If payment is not made by the _______ date, 10% will be added to the bill.",
       "A": "due", "B": "time", "C": "recent", "D": "play",
-      "dap_an_dung": "A"
+      "dap_an_dung": "A",
+      "giai_thich": "Ta có cụm từ cố định (collocation) 'due date' mang nghĩa là 'ngày hạn chót/ngày đáo hạn' (dành cho hóa đơn, bài tập...). Các từ khác không ghép được với 'date' trong ngữ cảnh này."
     },
     {
       "id_cau": 2,
@@ -14,7 +15,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "The farmers were aware _______ the impact of weeds on their crops.",
       "A": "of", "B": "at", "C": "for", "D": "to",
-      "dap_an_dung": "A"
+      "dap_an_dung": "A",
+      "giai_thich": "Cấu trúc cố định: be aware OF something (nhận thức được, ý thức được về điều gì)."
     },
     {
       "id_cau": 3,
@@ -22,7 +24,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "She asked if we had _______ questions.",
       "A": "some", "B": "the", "C": "any", "D": "a",
-      "dap_an_dung": "C"
+      "dap_an_dung": "C",
+      "giai_thich": "Từ 'any' thường được dùng trong câu hỏi, câu phủ định và trong mệnh đề gián tiếp có chứa 'if/whether'. Ở đây là câu hỏi được tường thuật lại nên dùng 'any' thay vì 'some' (dùng cho câu khẳng định)."
     },
     {
       "id_cau": 4,
@@ -30,7 +33,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "It's the house _______ door is painted red.",
       "A": "which", "B": "whose", "C": "that", "D": "X",
-      "dap_an_dung": "B"
+      "dap_an_dung": "B",
+      "giai_thich": "Đại từ quan hệ 'whose' dùng để thay thế cho tính từ sở hữu chỉ vật/người. Cấu trúc Danh từ 1 + whose + Danh từ 2 chỉ Danh từ 2 thuộc sở hữu của Danh từ 1 (cánh cửa của ngôi nhà)."
     },
     {
       "id_cau": 5,
@@ -38,7 +42,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "_______ words you don't know in the dictionary.",
       "A": "Look off", "B": "Turn on", "C": "Find out", "D": "Look up",
-      "dap_an_dung": "D"
+      "dap_an_dung": "D",
+      "giai_thich": "Cụm động từ (Phrasal verb) 'look up' có nghĩa là tra cứu (từ điển, thông tin, danh bạ)."
     },
     {
       "id_cau": 6,
@@ -46,7 +51,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "I don't know how to dance. I wish I _______ how to dance.",
       "A": "knew", "B": "know", "C": "didn't know", "D": "did",
-      "dap_an_dung": "A"
+      "dap_an_dung": "A",
+      "giai_thich": "Đây là câu điều ước ở hiện tại, thể hiện mong muốn trái ngược với thực tế (thực tế là 'don't know'). Cấu trúc: S + wish + S + V(quá khứ đơn). Từ 'know' lùi về quá khứ là 'knew'."
     },
     {
       "id_cau": 7,
@@ -54,7 +60,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "_______ they spent a lot of money on the film, it wasn't a big success.",
       "A": "When", "B": "Although", "C": "Nevertheless", "D": "However",
-      "dap_an_dung": "B"
+      "dap_an_dung": "B",
+      "giai_thich": "Phía sau khoảng trống là một mệnh đề hoàn chỉnh (S + V) mang ý nghĩa nhượng bộ, nên ta dùng liên từ 'Although' (Mặc dù). 'However' cũng mang nghĩa tương phản nhưng thường đứng đầu câu và có dấu phẩy đi kèm phía sau."
     },
     {
       "id_cau": 8,
@@ -62,7 +69,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "The rules didn't specify _______ to speak to in case of an emergency.",
       "A": "what", "B": "who", "C": "asking", "D": "will ask",
-      "dap_an_dung": "B"
+      "dap_an_dung": "B",
+      "giai_thich": "Cấu trúc Từ để hỏi + to V. 'Speak to' (nói chuyện với) cần một tân ngữ chỉ người, nên ta dùng 'who' (nói chuyện với ai)."
     },
     {
       "id_cau": 9,
@@ -70,7 +78,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "She left her office key at home _______ which caused her to be late for work yesterday.",
       "A": "by mistake", "B": "with pleasure", "C": "by heart", "D": "by hand",
-      "dap_an_dung": "A"
+      "dap_an_dung": "A",
+      "giai_thich": "Thành ngữ 'by mistake' có nghĩa là vô tình, do nhầm lẫn, lơ đãng."
     },
     {
       "id_cau": 10,
@@ -78,7 +87,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "The street is _______ than it used to be.",
       "A": "more", "B": "narrower", "C": "narrow", "D": "the narrower",
-      "dap_an_dung": "B"
+      "dap_an_dung": "B",
+      "giai_thich": "Dấu hiệu 'than' chỉ sự so sánh hơn. 'Narrow' (hẹp) là tính từ 2 âm tiết nhưng kết thúc bằng đuôi '-ow' nên được tính là tính từ ngắn (trường hợp ngoại lệ). Ta chỉ cần thêm '-er' thành narrower."
     },
     {
       "id_cau": 11,
@@ -86,7 +96,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "A: It's quite high, but it's much lower than Mount Fansipan. B: _______",
       "A": "Is Fansipan the highest mountain in the world?", "B": "Do you want to spend this summer trekking Mount Tà Xùa?", "C": "How about Mount Tà Xùa?", "D": "Let's go there.",
-      "dap_an_dung": "C"
+      "dap_an_dung": "C",
+      "giai_thich": "B đang đưa ra lời nhận xét so sánh chiều cao của một ngọn núi với Fansipan, nên câu hỏi của A phải là một lời đề xuất/hỏi ý kiến về một ngọn núi cụ thể (Thế còn núi Tà Xùa thì sao?)."
     },
     {
       "id_cau": 12,
@@ -94,63 +105,72 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "Choose the best arrangement:\na. Amy: Yes! I've been growing herbs lately.\nb. Oliver: Oh, cool! What got you into it?\nc. Oliver: That's really cool. I might just have to start my own little garden!\nd. Amy: I wanted fresh ingredients for cooking, and it's so satisfying to grow them myself.\ne. Oliver: Hey, Amy! Are you still into gardening?",
       "A": "c-d-b-a-e", "B": "e-d-c-a-b", "C": "c-a-e-d-b", "D": "e-a-b-d-c",
-      "dap_an_dung": "D"
+      "dap_an_dung": "D",
+      "giai_thich": "Mở đầu bằng câu hỏi thăm sở thích (e), Amy đáp lại là đang trồng thảo mộc (a). Oliver hỏi lý do (b), Amy đưa ra lý do thích nguyên liệu tươi (d). Cuối cùng Oliver khen ngợi và nói dự định của mình (c)."
     },
     {
       "id_cau": 13,
       "phan_thi": "II. Supply the correct form of the word in bold to complete each of the following sentences. (1pt)",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "His parents won't let him play ice hockey because they think it is too _______ (DANGER).",
-      "dap_an_chap_nhan": ["dangerous", "Dangerous"]
+      "dap_an_chap_nhan": ["dangerous", "Dangerous"],
+      "giai_thich": "Đứng sau động từ to be (is) và trạng từ chỉ mức độ (too) cần một tính từ. DANGER (danh từ) -> DANGEROUS (tính từ)."
     },
     {
       "id_cau": 14,
       "phan_thi": "II. Supply the correct form of the word in bold to complete each of the following sentences. (1pt)",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "We are one of the largest _______ of employment in the area. (PROVIDE)",
-      "dap_an_chap_nhan": ["providers", "Providers"]
+      "dap_an_chap_nhan": ["providers", "Providers"],
+      "giai_thich": "Đứng sau cụm 'one of the...' (một trong những...) cần danh từ số nhiều. PROVIDE (động từ: cung cấp) -> PROVIDER (danh từ: nhà cung cấp) -> thêm 's'."
     },
     {
       "id_cau": 15,
       "phan_thi": "II. Supply the correct form of the word in bold to complete each of the following sentences. (1pt)",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "Greener is an organisation which _______ community activities. (SUPPORT)",
-      "dap_an_chap_nhan": ["supports", "Supports"]
+      "dap_an_chap_nhan": ["supports", "Supports"],
+      "giai_thich": "Đại từ quan hệ 'which' thay thế cho 'organisation' (số ít). Đây là sự thật nên dùng thì Hiện tại đơn, động từ phải thêm 's'."
     },
     {
       "id_cau": 16,
       "phan_thi": "II. Supply the correct form of the word in bold to complete each of the following sentences. (1pt)",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "You can get on a train and go _______ to the ski resort. (DIRECT)",
-      "dap_an_chap_nhan": ["directly", "Directly"]
+      "dap_an_chap_nhan": ["directly", "Directly"],
+      "giai_thich": "Cần một trạng từ để bổ nghĩa cho động từ thường 'go' (đi thẳng tới...). DIRECT (tính từ) -> DIRECTLY (trạng từ)."
     },
     {
       "id_cau": 17,
       "phan_thi": "III. Complete each of the following sentences with the correct tense of the verb in bold. (1pt)",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "My father _______ (work) for her company since our family moved to this area.",
-      "dap_an_chap_nhan": ["has been working", "has worked"]
+      "dap_an_chap_nhan": ["has been working", "has worked"],
+      "giai_thich": "Dấu hiệu since + mệnh đề quá khứ đơn, phía trước dùng thì Hiện tại hoàn thành (hoặc HTHT tiếp diễn)."
     },
     {
       "id_cau": 18,
       "phan_thi": "III. Complete each of the following sentences with the correct tense of the verb in bold. (1pt)",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "I don't know many English words. I wish I _______ (know) more English words.",
-      "dap_an_chap_nhan": ["knew", "Knew"]
+      "dap_an_chap_nhan": ["knew", "Knew"],
+      "giai_thich": "Câu điều ước ở hiện tại trái với thực tế ('don't know'), ta lùi thì 'know' về quá khứ đơn là 'knew'."
     },
     {
       "id_cau": 19,
       "phan_thi": "III. Complete each of the following sentences with the correct tense of the verb in bold. (1pt)",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "Please download this app which _______ (help) you navigate a new place.",
-      "dap_an_chap_nhan": ["helps", "Helps", "will help"]
+      "dap_an_chap_nhan": ["helps", "Helps", "will help"],
+      "giai_thich": "Mệnh đề quan hệ nói về tính năng hiển nhiên của ứng dụng (app - số ít) nên dùng thì Hiện tại đơn, động từ thêm 's'."
     },
     {
       "id_cau": 20,
       "phan_thi": "III. Complete each of the following sentences with the correct tense of the verb in bold. (1pt)",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "My friends fancy _______ (watch) Taylor Swift performing live.",
-      "dap_an_chap_nhan": ["watching", "Watching"]
+      "dap_an_chap_nhan": ["watching", "Watching"],
+      "giai_thich": "Sau động từ chỉ sở thích 'fancy' (yêu thích) bắt buộc cộng với V-ing."
     },
     {
       "id_cau": 21,
@@ -158,7 +178,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "hinh_anh": "/static/de6_1.jpg",
       "A": "Electricity is in higher place.", "B": "Be careful! High-tech devices!", "C": "Serious injury or death may occur.", "D": "Voltage is not high enough.",
-      "dap_an_dung": "C"
+      "dap_an_dung": "C",
+      "giai_thich": "Biển báo DANGER - HIGH VOLTAGE (Điện cao thế) có thể gây thương tích nghiêm trọng hoặc tử vong."
     },
     {
       "id_cau": 22,
@@ -166,7 +187,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "hinh_anh": "/static/de6_2.jpg",
       "A": "There is a nearby medical center.", "B": "We should take patients to the hospital.", "C": "Hospitals are permitted to build here.", "D": "The Red Cross is available.",
-      "dap_an_dung": "A"
+      "dap_an_dung": "A",
+      "giai_thich": "Ký hiệu chữ H và giường bệnh là ký hiệu giao thông quốc tế chỉ dẫn có Bệnh viện/Trung tâm y tế ở gần."
     },
     {
       "id_cau": 23,
@@ -174,7 +196,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "hinh_anh": "/static/de6_3.png",
       "A": "You have 15 minutes to get your car.", "B": "You can pick up your car after 10 p.m.", "C": "You can stay in the mall until 10 p.m if you walk home.", "D": "You have to spend 15 minutes to get your car.",
-      "dap_an_dung": "A"
+      "dap_an_dung": "A",
+      "giai_thich": "Yêu cầu lấy xe trước 15 phút. Nếu đi bộ (walk home) thì không cần lấy xe, được ở lại đến lúc đóng cửa (10 p.m)."
     },
     {
       "id_cau": 24,
@@ -182,7 +205,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "hinh_anh": "/static/de6_4.png",
       "A": "Let the assistant know if you think there's a mistake on your receipt.", "B": "Keep your receipt because you might need to change something you bought.", "C": "Tell the assistant if you've lost the receipt for something you bought.", "D": "After leaving the shop, you can call the assistant for help.",
-      "dap_an_dung": "A"
+      "dap_an_dung": "A",
+      "giai_thich": "Báo cho nhân viên nếu bạn thấy có lỗi trên hóa đơn. (Tell = Let know, Problem = Mistake)."
     },
     {
       "id_cau": 25,
@@ -191,7 +215,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "1. As a teenager, Tim _______",
       "A": "went on trips with his parents.", "B": "became interested in seeing the world.", "C": "spent too much time watching TV.", "D": "did some extra work.",
-      "dap_an_dung": "B"
+      "dap_an_dung": "B",
+      "giai_thich": "Bài đọc viết phim ảnh làm ông ấy 'want to travel' tương đương với việc trở nên hứng thú với việc nhìn ngắm thế giới."
     },
     {
       "id_cau": 26,
@@ -200,7 +225,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "2. What does Tim say about his trip to Europe?",
       "A": "He didn't have time to see everything.", "B": "It was more fun than college.", "C": "He had many time to see.", "D": "It was not a great success.",
-      "dap_an_dung": "D"
+      "dap_an_dung": "D",
+      "giai_thich": "Đoạn văn có cụm 'trip didn't go well', nghĩa là chuyến đi không suôn sẻ/thành công."
     },
     {
       "id_cau": 27,
@@ -209,7 +235,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "3. When Tim was 21, he couldn't _______",
       "A": "travel as much as he wanted to.", "B": "decide what to write about.", "C": "sell many of his articles.", "D": "earn more from writing.",
-      "dap_an_dung": "C"
+      "dap_an_dung": "C",
+      "giai_thich": "Đoạn văn viết 'none of the travel magazines... wanted to buy them' cho thấy ông ấy không bán được các bài báo của mình lúc mới bắt đầu."
     },
     {
       "id_cau": 28,
@@ -218,7 +245,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "4. What's the best thing about being a travel writer?",
       "A": "hearing from his fans.", "B": "giving advice to people.", "C": "meeting other young writers.", "D": "changing his job.",
-      "dap_an_dung": "A"
+      "dap_an_dung": "A",
+      "giai_thich": "Ông ấy nói điều tuyệt nhất là nhận được thư từ độc giả, tương đương với việc nhận tin từ người hâm mộ (fans)."
     },
     {
       "id_cau": 29,
@@ -227,7 +255,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "1.",
       "A": "a", "B": "an", "C": "the", "D": "Ø",
-      "dap_an_dung": "A"
+      "dap_an_dung": "A",
+      "giai_thich": "'phrase or sentence' là danh từ đếm được số ít, mang nghĩa chung chung nên dùng mạo từ 'a'."
     },
     {
       "id_cau": 30,
@@ -236,7 +265,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "2.",
       "A": "of", "B": "for", "C": "on", "D": "with",
-      "dap_an_dung": "D"
+      "dap_an_dung": "D",
+      "giai_thich": "Cấu trúc 'words with similar meanings' nghĩa là các từ có nghĩa tương tự nhau."
     },
     {
       "id_cau": 31,
@@ -245,7 +275,8 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "3.",
       "A": "Take", "B": "Have", "C": "Make", "D": "Come",
-      "dap_an_dung": "C"
+      "dap_an_dung": "C",
+      "giai_thich": "Cụm từ cố định: Make sure (đảm bảo rằng)."
     },
     {
       "id_cau": 32,
@@ -254,36 +285,40 @@
       "loai_cau_hoi": "trac_nghiem",
       "noi_dung_cau_hoi": "4.",
       "A": "another", "B": "other", "C": "the other", "D": "others",
-      "dap_an_dung": "B"
+      "dap_an_dung": "B",
+      "giai_thich": "Cấu trúc 'other + danh từ số nhiều' dùng để chỉ những cái khác (other tips)."
     },
     {
       "id_cau": 33,
       "phan_thi": "VII. Use the given words or phrases to make complete sentence. (1pt)\n CÁC CÂU VIẾT NHỚ ĐỂ Ý DẤU CÂU CUỐI CÙNG VÌ THIẾU DẤU CÂU SẼ KHÔNG TÍNH ĐIỂM NHÉ !!!",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "When we / arrive / guide / tell / the story / a cruel king.",
-      "dap_an_chap_nhan": ["When we arrived, the guide told us the story of a cruel king.", "When we arrived, the guide told the story of a cruel king."]
+      "dap_an_chap_nhan": ["When we arrived, the guide told us the story of a cruel king.", "When we arrived, the guide told the story of a cruel king."],
+      "giai_thich": "Câu kể về một sự việc đã xảy ra trong quá khứ nên dùng thì Quá khứ đơn cho cả 2 mệnh đề."
     },
     {
       "id_cau": 34,
       "phan_thi": "VII. Use the given words or phrases to make complete sentence. (1pt)\n CÁC CÂU VIẾT NHỚ ĐỂ Ý DẤU CÂU CUỐI CÙNG VÌ THIẾU DẤU CÂU SẼ KHÔNG TÍNH ĐIỂM NHÉ !!!",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "Visitors / can't help / take photos / amazing scenery / Bản Giốc Waterfalls.",
-      "dap_an_chap_nhan": ["Visitors can't help taking photos of the amazing scenery of Ban Gioc Waterfalls."]
+      "dap_an_chap_nhan": ["Visitors can't help taking photos of the amazing scenery of Ban Gioc Waterfalls."],
+      "giai_thich": "Cấu trúc: can't help + V-ing (không thể không làm gì/không nhịn được việc gì)."
     },
     {
       "id_cau": 35,
       "phan_thi": "VIII. Complete each of the following sentences so that it is closest in meaning to the original one. (1pt)\n CÁC CÂU VIẾT NHỚ ĐỂ Ý DẤU CÂU CUỐI CÙNG VÌ THIẾU DẤU CÂU SẼ KHÔNG TÍNH ĐIỂM NHÉ !!!",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "Unless you leave home now, you will miss the flight. (DON'T)",
-      "dap_an_chap_nhan": ["If you don't leave home now, you will miss the flight", 
-        "If you do not leave home now, you will miss the flight"
-      ]
+      "dap_an_chap_nhan": ["If you don't leave home now, you will miss the flight", "If you do not leave home now, you will miss the flight"],
+      "giai_thich": "Câu điều kiện loại 1: Unless = If ... not (Nếu không... thì)."
     },
     {
       "id_cau": 36,
       "phan_thi": "VIII. Complete each of the following sentences so that it is closest in meaning to the original one. (1pt)\n CÁC CÂU VIẾT NHỚ ĐỂ Ý DẤU CÂU CUỐI CÙNG VÌ THIẾU DẤU CÂU SẼ KHÔNG TÍNH ĐIỂM NHÉ !!!",
       "loai_cau_hoi": "tu_luan_ngan",
       "noi_dung_cau_hoi": "Make sure your bags are tagged. You can find them easily. (IN ORDER TO) \nMake sure ______________ them easily.",
-      "dap_an_chap_nhan": ["in order to find them easily"]
+      "dap_an_chap_nhan": ["in order to find them easily"],
+      "giai_thich": "Cấu trúc chỉ mục đích: in order to + V (để làm gì đó)."
     }
-  ]}
+  ]
+}
