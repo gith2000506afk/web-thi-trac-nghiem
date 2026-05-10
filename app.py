@@ -24,13 +24,17 @@ GOOGLE_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1WqYaDrJaiEbUCrvozAVh
 
 def ghi_diem_vao_sheets(ma_de, diem, tong_cau, thoi_gian):
     try:
+        import json
         scopes = [
             "https://www.googleapis.com/auth/spreadsheets",
             "https://www.googleapis.com/auth/drive"
         ]
-        credentials = Credentials.from_service_account_file('google_key.json', scopes=scopes)
+        
+        # Đọc cấu hình từ Biến môi trường thay vì file
+        service_account_info = json.loads(os.environ.get('GOOGLE_SERVICE_ACCOUNT_JSON'))
+        credentials = Credentials.from_service_account_info(service_account_info, scopes=scopes)
+        
         client = gspread.authorize(credentials)
-
         sheet = client.open_by_url(GOOGLE_SHEET_URL).sheet1
 
         diem_hien_thi = f"{diem}/{tong_cau}"
