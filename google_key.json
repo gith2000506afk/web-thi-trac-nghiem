@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "central-phalanx-495418-m7",
+  "private_key_id": "820e1879384ce74ced62375e6188bd59ab10d03c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDNPKOmqYMXUP1x\n5RK/xNGo19/3dVywO1/315tmuCgiSqkgq9C+H+7qOF6jtQ2wXxS/pWAzArjgHwGh\nMdOHJ08S+Un1iRsGMp3GPVmZNR5U7vH9I/H6pDIfLop7NWNout/ZIJ8k76udFLKv\nGiYLCqL6sp3J4QuP6qOrxVG3UFM3uHuOEBAm3bkMNA0G03NJslPOCH1cUBMNy2OU\nRd/H7jsXkrpNFX3Ji9Oh0ZKLfM1I+ha/NrTn0oeuubjH832DfGGR+pF7IO0AY+zH\nsYtvBVMpc4jwLAF5pG/rjaaH6zKXVUoVQRTnJgBtyzvQkcpmA88g5VPgJIDmBwdm\naD65L++xAgMBAAECggEAEx4LBekcDonTI97xR0bteydpo7atTLapJrBRF8k/ZstS\n0/nhKraVhgB8c04YAXXn3D6qtnGyWCEXQSU/pYMgOt2Y+au85k/Ecczw6cQgiEuO\nI7TrkzvkddJbYKTtVrnyhDqFTHbdQtdk2gnq4YQrAIRvDXkenzgdaRCLHzLWn5XP\nSzl1P4mWXkhwxZdLjyoxrOCAfINxqz1JTtEGNXblb2cV19tWSJ3bEZn2tVuelIbL\navx2yzbtMrH5GnlMdifp7MHABxOhfYH3aRK6SayeCmCkn9XTldnoRGg8ST5A8+yB\nzvXNaEhO9Dwkadl0N5D4WEUtBELiJudp0SnLL60uqQKBgQDnEdIU9cCz2R4SSsed\nISofcU67OrLLeHwSJf2oQrg2Zjpw43kQR8i3GxJOwy3p+dG839R7SOPYIAvXkK0s\nPHfgYeyzSrLZ/cZ3prjj0Rs7xuS3UaGg2L2cMZoYXBd4qpOvHCp37saj2sLsXCs6\nSCnzj2eUfUfE/MwW7V0uwgbbOQKBgQDjYVBzHenxEhyWUvlnplKLXV+ZAKPsifvh\nXqsOvm7G4hVc/lqJPRZJrUd378bPYj5VMgxwjykgXnZIJgxvAERtMsXLk738ENPn\nU+gUkw1IKU2X7BzVwdZF+LJ3/lYAO4tLZDUshaYs5a7h0fQg/1R0UYiYyuHKd2DJ\niwYMAlIgOQKBgQDUmC/KewTuM5+YQtb/OYkw3qYKWwovbE3ywKNtkN09p7azMIat\nNO51kWG5t5fhwqh29xTezQRcT7e1gHXj0kqU1mPZ3atKJ1PXuDw51qUQzYCXLXLg\nsylYsMZPDUPHEGHKZcapC7YVAWv/3RkkiUqXvWQWWWGT2ubHXWIzZ+64+QKBgQCL\nLqJEFOeCfQeqrJel7pVQYZOG4HF29O+NgJlMqRy9+N4C0l8w6oeeCcdZjxgvEX/+\nPmiG7drKyYe1mjS6LXu1LAMPHhyJEvPjAeVp0qmqpj2s5Qaxgblbk2QLN1AFTG1z\ndJ9n5VdW3DE0YYQCPsi/erkWbfnQKUrBk6vb5f/HYQKBgQCv4XJLX2u4BU2uybBk\n2ibySzZmflCNoQnLquJ5Vl/86E2MAMqZDV0hIxzlAEvIdADQfrzBWHzu9rU19dxU\nATug0gbuCE/YgR3xenMuHzEUVRr7NkFbK/3t7aFIPreV6xKbjdA8X+E/kBlgccZP\n/ZRL3dkfjmAaP5rfcMwU0PEPdQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "bot-cham-diem@central-phalanx-495418-m7.iam.gserviceaccount.com",
+  "client_id": "106951638137147941474",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bot-cham-diem%40central-phalanx-495418-m7.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
